@@ -30,7 +30,7 @@ Table.propTypes = {
         PropTypes.number,
         PropTypes.string,
       ]),
-    })
+    }),
   ).isRequired,
 };
 

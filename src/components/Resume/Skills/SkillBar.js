@@ -37,7 +37,7 @@ SkillBar.propTypes = {
     PropTypes.shape({
       name: PropTypes.string,
       color: PropTypes.string,
-    })
+    }),
   ),
 };
 
