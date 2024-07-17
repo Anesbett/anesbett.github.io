@@ -56,4 +56,3 @@ module.exports = {
     "global-require": 0,
   },
 };
-
