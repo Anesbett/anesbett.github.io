@@ -23,6 +23,15 @@ jobs:
         with:
           node-version-file: ".nvmrc"
           cache: "npm"
+      - name: Convert line endings (Linux and macOS)
+        if: matrix.os != 'windows-latest'
+        run: find . -type f -exec dos2unix {} \;
+      - name: Convert line endings (Windows)
+        if: matrix.os == 'windows-latest'
+        run: |
+          git config core.autocrlf true
+          git add --renormalize .
+          git commit -m "Normalize line endings"
       - run: npm ci
       - name: Lint
         run: npm run lint
