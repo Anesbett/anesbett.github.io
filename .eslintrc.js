@@ -12,6 +12,8 @@ module.exports = {
   parser: "@babel/eslint-parser",
   plugins: ["react"],
   rules: {
+    "function-paren-newline": ["error", "consistent"],
+    "implicit-arrow-linebreak": "off",
     quotes: [2, "double", { avoidEscape: true }],
     "linebreak-style": ["error", "windows"],
     "jsx-a11y/anchor-is-valid": ["error", {
