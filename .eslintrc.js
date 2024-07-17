@@ -12,17 +12,12 @@ module.exports = {
   parser: "@babel/eslint-parser",
   plugins: ["react"],
   rules: {
-    "function-paren-newline": ["error", "consistent"],
-    "implicit-arrow-linebreak": "off",
     quotes: [2, "double", { avoidEscape: true }],
-    "linebreak-style": ["error", "windows"],
+    "linebreak-style": ["error", "windows"], // Use "unix" if you need LF line endings
     "jsx-a11y/anchor-is-valid": ["error", {
       components: ["Link"],
       specialLink: ["to", "hrefLeft", "hrefRight"],
       aspects: ["noHref", "invalidHref", "preferButton"],
-      "linebreak-style": ["error", "unix"],
-      "global-require": 0,
-      "eslint linebreak-style": [0, "error", "unix"],
     }],
     "jsx-a11y/click-events-have-key-events": 0,
     "jsx-a11y/href-no-hash": "off",
@@ -56,5 +51,9 @@ module.exports = {
         return: true,
       },
     ],
+    "implicit-arrow-linebreak": "off",
+    "function-paren-newline": ["error", "consistent"],
+    "global-require": 0,
   },
 };
+
